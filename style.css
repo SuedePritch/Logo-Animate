@@ -1,0 +1,109 @@
+:root{
+    --clr-background:hsl(213, 30%, 19%);
+    
+    /* Orange Logo */
+    --clr-stroke:hsl(0, 0%, 0%);
+    --clr-fill:hsl(27, 79%, 56%);
+    --clr-fade:hsl(27, 100%, 73%);
+    /* White Logo */
+    --clr-fill-white:hsl(0, 0%, 100%);
+    --clr-fade-white:hsl(213, 30%, 70%);
+    --clr-stroke-white:hsl(0, 0%, 17%);
+    
+}
+*,
+*:before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dark{
+    background-color: var(--clr-background);
+}
+svg{
+    margin:1rem;
+    width: 120px;
+    height:120px;
+    fill:none;
+}
+
+
+
+
+.orange 
+#A,
+.orange #O,
+.orange #W-right,
+.orange #W-left{
+    fill:var(--clr-fill);
+    stroke:var(--clr-stroke);
+}
+.orange #W-left{
+    animation: letterFade 4000ms 0ms forwards ease-out infinite;
+}
+.orange #O{
+    animation: letterFade 4000ms 300ms forwards ease-out infinite;
+}
+.orange #W-right{
+    animation: letterFade 4000ms 600ms forwards ease-out infinite;
+}
+.orange #A{
+    animation: letterFade 4000ms 1200ms forwards ease-out infinite;
+}
+@keyframes letterFade {
+    0%{
+        fill:var(--clr-fill)
+    }
+    18%{
+        fill:var(--clr-fade)
+    }
+    38%{
+        fill:var(--clr-fill)
+    }
+    100%{
+        fill:var(--clr-fill)
+    }
+}
+
+
+
+
+.white 
+#A,
+.white #O,
+.white #W-right,
+.white #W-left{
+    fill:var(--clr-fill-white);
+    stroke:var(--clr-stroke-white);
+}
+.white #W-left{
+    animation: letterFadeWhite 4000ms 0ms forwards ease-out infinite;
+}
+.white #O{
+    animation: letterFadeWhite 4000ms 300ms forwards ease-out infinite;
+}
+.white #W-right{
+    animation: letterFadeWhite 4000ms 600ms forwards ease-out infinite;
+}
+.white #A{
+    animation: letterFadeWhite 4000ms 1200ms forwards ease-out infinite;
+}
+@keyframes letterFadeWhite {
+    0%{
+        fill:var(--clr-fill-white)
+    }
+    18%{
+        fill:var(--clr-fade-white)
+    }
+    38%{
+        fill:var(--clr-fill-white)
+    }
+    100%{
+        fill:var(--clr-fill-white)
+    }
+}
